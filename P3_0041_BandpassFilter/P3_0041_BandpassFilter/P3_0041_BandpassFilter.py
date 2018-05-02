@@ -13,15 +13,15 @@ R2 = 20*pi
 L1 = 5e-3
 L2 = 5e-3
 Ue = 24
-f = np.linspace(0,2000,num=50000)
+f = np.linspace(0,500000,num=50000)
 if 0 in f:
     f = np.delete(f,0)
 omega = 2 * pi * f
 
 @np.vectorize
 def Ua(omega):
-    U2 = Ue/(np.sqrt(1+((R1)/np.power((omega*L1),2))))
-    return U2/(np.sqrt(1+((omega*L2)/np.power((R2),2))))
+    U2 = Ue/(np.sqrt(1+((R1/(omega*L1))**2 )))
+    return U2/(np.sqrt(1+(((omega*L2)/R2)**2)))
 
 @np.vectorize
 def Spannungsverstaerkung(U1,U2):
