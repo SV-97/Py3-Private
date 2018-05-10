@@ -1,5 +1,4 @@
 lst = [4,5,7,1,3,8,6,4,10,2,-20,10.5]
-print(lst)
 sorted = []
 
 while len(lst) > 1:
@@ -12,5 +11,6 @@ while len(lst) > 1:
         if i == 1:
             sorted.append(lst.pop(0))
 sorted.append(lst.pop(0))
-print(sorted)
+
 print(lst)
+print(sorted)
