@@ -8,9 +8,9 @@ import timeit
 
 pi = np.pi
 R = 10
-L = 10e-3
+L = 100e-3
 C = 10e-6
-f = np.linspace(0,20e6,50000)
+f = np.linspace(0,20e9,500000)
 f = f[1:]
 OMEGA = 2 * pi * f
 
@@ -18,8 +18,12 @@ OMEGA = 2 * pi * f
 def Z(omega):
     Xc = 1/omega*C
     Xl = omega*L
-    nenner = R**2-(Xl-Xc)**2
-    return np.complex((R*Xc)/nenner, (Xl*(R**2-Xc*Xl-Xc**2))/nenner)
+    Z1 = np.complex(R,-Xc)
+    Z2 = np.complex(0,Xl)
+    Zg = (Z1*Z2)/(Z1+Z2)
+    nenner = R**2+(Xl-Xc)**2
+    #return np.complex((R*Xl*((Xl-Xc)+Xc))/nenner, (R**2*Xl-Xc*Xl*(Xl-Xc))/nenner)
+    return Zg
 
 z = Z(OMEGA)
 y = 1/z
@@ -35,6 +39,7 @@ plt.legend()
 
 plt.subplot(height,widths,2)
 plt.plot(z.real,z.imag, linewidth = 2, label = "Z")
+#plt.semilogx(z.real, z.imag,linewidth = 2, label = "Z")
 plt.ylabel("Imaginärteil")
 plt.xlabel("Realteil")
 plt.legend()
