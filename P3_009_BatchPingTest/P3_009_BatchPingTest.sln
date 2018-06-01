@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2018
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "P3_009_BatchPingTest", "P3_009_BatchPingTest\P3_009_BatchPingTest.pyproj", "{C946AF31-E26A-4DAF-8E6B-EB7D3746F3BD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C946AF31-E26A-4DAF-8E6B-EB7D3746F3BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C946AF31-E26A-4DAF-8E6B-EB7D3746F3BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C6EF29FA-6A6E-4F67-9C24-35FECE92F89D}
+	EndGlobalSection
+EndGlobal
