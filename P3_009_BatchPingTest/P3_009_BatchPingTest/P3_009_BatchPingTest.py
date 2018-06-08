@@ -31,12 +31,15 @@ def pltshow():
                 cx = datetime.fromtimestamp(mktime(cx))
                 x.append(cx)
                 y.append(cy)
+            mean = sum(y)/len(y)
+            mean_x = (x[0],x[len(x)-1])
+            mean_y = (mean,mean)
             ax.clear()
+            ax.plot(mean_x,mean_y, linewidth = 2, label = "mean = {:.2f}".format(mean), linestyle = ":")
             ax.plot(x,y, linewidth = 2, label = address)
             plt.ylabel("Response time in ms") # label the y axis
             plt.xlabel("Timestamp") # label the x axis
             fig.legend() # show a small window with the label assigned in plot + the colour of the line
-            plt.draw()
 
     ani = animation.FuncAnimation(fig,plot,interval = 1000)
     plt.show()
