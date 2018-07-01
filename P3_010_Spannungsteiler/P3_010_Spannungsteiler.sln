@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "P3_010_Spannungsteiler", "P3_010_Spannungsteiler\P3_010_Spannungsteiler.pyproj", "{54543A66-9D4C-411E-86D1-38642954DBA6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{54543A66-9D4C-411E-86D1-38642954DBA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54543A66-9D4C-411E-86D1-38642954DBA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {92B27EE7-DCB3-4ABF-8CDA-E679E9C885E4}
+	EndGlobalSection
+EndGlobal
