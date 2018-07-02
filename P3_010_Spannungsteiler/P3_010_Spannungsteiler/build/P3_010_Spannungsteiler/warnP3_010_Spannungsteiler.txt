@@ -1,7 +1,7 @@
 missing module named resource - imported by posix, D:\Git Repos\Py3-Private\P3_010_Spannungsteiler\P3_010_Spannungsteiler\P3_010_Spannungsteiler.py
 missing module named posix - imported by os, D:\Git Repos\Py3-Private\P3_010_Spannungsteiler\P3_010_Spannungsteiler\P3_010_Spannungsteiler.py
 missing module named _posixsubprocess - imported by subprocess, D:\Git Repos\Py3-Private\P3_010_Spannungsteiler\P3_010_Spannungsteiler\P3_010_Spannungsteiler.py
-missing module named org - imported by pickle, D:\Git Repos\Py3-Private\P3_010_Spannungsteiler\P3_010_Spannungsteiler\P3_010_Spannungsteiler.py
+missing module named 'org.python' - imported by pickle, D:\Git Repos\Py3-Private\P3_010_Spannungsteiler\P3_010_Spannungsteiler\P3_010_Spannungsteiler.py, xml.sax
 missing module named readline - imported by cmd, code, pdb, D:\Git Repos\Py3-Private\P3_010_Spannungsteiler\P3_010_Spannungsteiler\P3_010_Spannungsteiler.py
 excluded module named _frozen_importlib - imported by importlib, importlib.abc, D:\Git Repos\Py3-Private\P3_010_Spannungsteiler\P3_010_Spannungsteiler\P3_010_Spannungsteiler.py
 missing module named _frozen_importlib_external - imported by importlib._bootstrap, importlib, importlib.abc, D:\Git Repos\Py3-Private\P3_010_Spannungsteiler\P3_010_Spannungsteiler\P3_010_Spannungsteiler.py
@@ -14,4 +14,4 @@ missing module named termios - imported by tty, D:\Git Repos\Py3-Private\P3_010_
 missing module named grp - imported by shutil, tarfile, D:\Git Repos\Py3-Private\P3_010_Spannungsteiler\P3_010_Spannungsteiler\P3_010_Spannungsteiler.py
 missing module named pwd - imported by posixpath, shutil, tarfile, http.server, webbrowser, D:\Git Repos\Py3-Private\P3_010_Spannungsteiler\P3_010_Spannungsteiler\P3_010_Spannungsteiler.py, netrc, getpass
 missing module named _dummy_threading - imported by dummy_threading, D:\Git Repos\Py3-Private\P3_010_Spannungsteiler\P3_010_Spannungsteiler\P3_010_Spannungsteiler.py
-missing module named 'org.python' - imported by copy, D:\Git Repos\Py3-Private\P3_010_Spannungsteiler\P3_010_Spannungsteiler\P3_010_Spannungsteiler.py, xml.sax
+missing module named org - imported by copy, D:\Git Repos\Py3-Private\P3_010_Spannungsteiler\P3_010_Spannungsteiler\P3_010_Spannungsteiler.py

@@ -123,3 +123,6 @@ if standart_series != ():
     print("delta Rv = {:>4.2f} %".format(rstandev[0]*100))
     for i in range(1,len(rstan)):
         print("delta R{} = {:>4.2f} % das Potential gegen Masse beträgt {:>6.2g} V bzw. {:>6.2g} dB der Referenzspannung".format(i, rstandev[i]*100,js[i],jsdB[i]))
+
+
+input("Beliebige Taste drücken um zu beenden...")
