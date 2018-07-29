@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "P3_012_KCDDice", "P3_012_KCDDice\P3_012_KCDDice.pyproj", "{F7552500-C6D7-44D4-836F-AD5240728343}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F7552500-C6D7-44D4-836F-AD5240728343}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7552500-C6D7-44D4-836F-AD5240728343}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A426E67D-8C16-47BF-9F11-A08B3AF9B1C7}
+	EndGlobalSection
+EndGlobal
