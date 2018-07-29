@@ -7,9 +7,9 @@ import matplotlib.pyplot as plt
 import timeit
 
 pi = np.pi
-R = 10
+R = 150
 L = 100e-3
-C = 10e-6
+C = 50e-6
 f = np.linspace(0,20e9,500000)
 f = f[1:]
 OMEGA = 2 * pi * f
