@@ -23,12 +23,9 @@ def Z(omega):
     return np.complex((R/(R**2.0+(omega*L)**2.0))/((R/(R**2.0+(omega*L)**2.0))**2.0+(omega*C - (omega*L)/(R**2.0+(omega*L)**2.0))**2.0) , (omega*C - (omega*L)/(R**2.0+(omega*L)**2.0))/((R/(R**2.0+(omega*L)**2.0))**2.0+(omega*C - (omega*L)/(R**2.0+(omega*L)**2.0))**2.0))
 
 y = Y(OMEGA)
-<<<<<<< HEAD
-z = np.divide(y,1)
-
-=======
+z = 1/y
 z = Z(OMEGA)
->>>>>>> 37f40d83f9a6eb0d8844e89ba6d5cf3d22a8c894
+
 print(t.timeit())
 
 plt.subplot(2,1,1)
