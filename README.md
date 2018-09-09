@@ -4,7 +4,7 @@ All files in this git are published under a Creative Commons Attribution-ShareAl
 
 https://creativecommons.org/licenses/by-sa/4.0/legalcode
 
-##Repository for learning Python, various small programs and snippets
+## Repository for learning Python, various small programs and snippets
 
 000     - Number guess game  
 001     - Calculate faculty of a number  
