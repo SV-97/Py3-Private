@@ -43,3 +43,40 @@ N = {}
 Y = {}
                                         """.format(i, j, k, l, m, n, o, p))
 print(solutions)
+
+# limiting some factors beforehand manually:
+
+from time import time
+t1 = time()
+
+range_ = range(0, 10) 
+range_m = [1]
+range_s = range(8, 10) 
+
+def formula(D, E, M, N, O, R, S, Y):
+    return not 10**0*(E + D) + 10**1*(N + R) + 10**2*(E + O) + 10**3*(S + M) - (10**0*Y + 10**1*E + 10**2*N + 10**3*O + 10**4*M)
+    
+for d in range_:
+    for e in range_:
+        for m in range_m:
+            for n in range_:
+                for o in range_:
+                    for r in range_:
+                        for s in range_s:
+                            for y in [2]:
+                                if formula(d, e, m, n, o, r, s, y):
+                                    arr = [d,e,m,n,o,r,s,y]
+                                    if len(arr) == len(set(arr)):
+                                        print("""
+D = {}
+E = {}
+M = {}
+N = {}
+O = {}
+R = {}
+S = {}
+Y = {}
+""".format(d, e, m, n, o, r, s, y))
+
+t2 = time()
+print(t2-t1)
