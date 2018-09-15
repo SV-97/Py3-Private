@@ -30,25 +30,32 @@ for letter in without:
     alphabet = alphabet.replace(letter, "")
 pw_chars = alphabet + "123456789" + "!,;.-_+-*()[]{}$%=?"
 
-master_password = getpass.getpass()
+master_password = False
+master_password_check = True
+while master_password != master_password_check:
+    master_password = getpass.getpass()
+    master_password_check = getpass.getpass("Reenter Password: ")
+    if master_password != master_password_check:
+        print("Passwords don't match!")
 while True:
     with open(__file__, "r+") as file:
         rnd = random.Random(seed)
         domain = input("Domain: ")
-        len_ = input("[Length](12): ")
-        len_ = int(len_) if len(len_) > 0 else 12
-        if len(known_domains) < 1 or domain not in [x[0] for x in known_domains]:
-            copy = file.readlines()
-            for i in range(len(copy)):
-                if "known_domains = [" in copy[i]:
-                    if "[(" not in copy[i]:
-                        copy[i] = copy[i].replace("known_domains = [", 'known_domains = [("{}", {})'.format(domain, len_))                   
-                    else:
-                        copy[i] = copy[i].replace("]", ', ("{}", {})]'.format(domain, len_))                       
-                    break
-            file.seek(0)
-            file.writelines(copy)
-            file.truncate()
+        len_ = input("[Length](25): ")
+        len_ = int(len_) if len(len_) > 0 else 25
+        if True:
+            if len(known_domains) < 1 or domain not in [x[0] for x in known_domains]:
+                copy = file.readlines()
+                for i in range(len(copy)):
+                    if "known_domains = [" in copy[i]:
+                        if "[(" not in copy[i]:
+                            copy[i] = copy[i].replace("known_domains = [", 'known_domains = [("{}", {})'.format(domain, len_))                   
+                        else:
+                            copy[i] = copy[i].replace("]", ', ("{}", {})]'.format(domain, len_))                       
+                        break
+                file.seek(0)
+                file.writelines(copy)
+                file.truncate()
         abs_salt = "".join(rnd.choices(pw_chars, k=50))
         hash_str = abs_salt + master_password + domain
         randomized_iterations = 9600 # still need a good idea for this
