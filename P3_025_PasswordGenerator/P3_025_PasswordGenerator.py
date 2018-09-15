@@ -18,7 +18,7 @@ if len(known_domains) > 0:
         print("     Domain: {:^50} Length: {:^3}".format(x[0], x[1]))
 salt = "salty_s4l7" # primary salt to set
 directory = os.path.dirname(__file__)
-absolute_path = input("[Path]: ") # additional salt depending on location of the file(or input if path of original generation is known)
+absolute_path = input("[Path]({}/archive): ".format(__file__)) # additional salt depending on location of the file(or input if path of original generation is known)
 if not absolute_path:
     relative_path  = "/archive"
     absolute_path = directory + relative_path
