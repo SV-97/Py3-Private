@@ -43,7 +43,7 @@ while True:
         domain = input("Domain: ")
         len_ = input("[Length](25): ")
         len_ = int(len_) if len(len_) > 0 else 25
-        if True:
+        if True: # set to False if you don't want to use this as password manager but rather password generator
             if len(known_domains) < 1 or domain not in [x[0] for x in known_domains]:
                 copy = file.readlines()
                 for i in range(len(copy)):
