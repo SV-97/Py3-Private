@@ -10,6 +10,8 @@ Known-Issues:
 Additional ideas:
     - reading username and adding that to the salt (getpass.getuser())
     - saving the domains(encrypted?)
+    - timeout of password
+    - UI
 """
 known_domains = []
 if len(known_domains) > 0:
@@ -17,8 +19,9 @@ if len(known_domains) > 0:
     for x in known_domains:
         print("     Domain: {:^50} Length: {:^3}".format(x[0], x[1]))
 salt = "salty_s4l7" # primary salt to set
+
 directory = os.path.dirname(__file__)
-absolute_path = input("[Path]({}/archive): ".format(__file__)) # additional salt depending on location of the file(or input if path of original generation is known)
+absolute_path = input("[Path]({}/archive): ".format(directory)) # additional salt depending on location of the file(or input if path of original generation is known)
 if not absolute_path:
     relative_path  = "/archive"
     absolute_path = directory + relative_path
@@ -63,37 +66,4 @@ while True:
         rnd2 = random.Random(hashed.hex())
         print("".join(rnd2.choices(pw_chars, k=len_)))
 
-""" Not going to save the data - unnecessary security risk
-directory = os.path.dirname(__file__)
-absolute_path = input("[Path]: ")
-if not absolute_path:
-    relative_path  = "/archive"
-    absolute_path = directory + relative_path
-
-with open(absolute_path, "r+") as archive:
-    password = input("Password: ").encode()
-    pw_hash = hashlib.sha512(password).hexdigest()
-    print(pw_hash)
-    arch_pw = archive.read(128)
-    print("arch_pw = {}".format(arch_pw))
-    def write():
-        rnd = random.Random(password)
-        while True:
-            domain = input("Domain: ")
-            len_ = int(input("Lenght: "))
-            pw = "".join(rnd.choices(pw_chars, len_))
-
-    def read():
-        print("reading")
-    if not arch_pw:
-        archive.write(pw_hash + "\n") 
-        write()
-    else:
-        if pw_hash == arch_pw:    
-            if input("Read(Y) or Write(n): ") == "n":
-                write()
-            else:
-                read()
-        else:
-            print("Wrong Password!")
-"""
+# Not going to save the data - unnecessary security risk
