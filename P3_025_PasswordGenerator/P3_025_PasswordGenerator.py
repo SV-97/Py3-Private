@@ -40,6 +40,7 @@ while master_password != master_password_check:
     master_password_check = getpass.getpass("Reenter Password: ")
     if master_password != master_password_check:
         print("Passwords don't match!")
+master_hash = hashlib.sha512(master_password.encode()).digest()
 while True:
     with open(__file__, "r+") as file:
         rnd = random.Random(seed)
@@ -61,9 +62,8 @@ while True:
                 file.truncate()
         abs_salt = "".join(rnd.choices(pw_chars, k=50))
         hash_str = abs_salt + master_password + domain
-        randomized_iterations = 9600 # still need a good idea for this
+        randomizer = int.from_bytes(master_hash, byteorder="big", signed=False)%8        
+        randomized_iterations = 2*randomizer**randomizer
         hashed = hashlib.pbkdf2_hmac("sha512", hash_str.encode(), str(rnd.randint(0, int(1e100))+len_).encode(), randomized_iterations)
         rnd2 = random.Random(hashed.hex())
         print("".join(rnd2.choices(pw_chars, k=len_)))
-
-# Not going to save the data - unnecessary security risk
