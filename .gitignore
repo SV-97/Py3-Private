@@ -260,3 +260,5 @@ paket-files/
 __pycache__/
 *.pyc
 \.vscode/settings\.json
+
+P3_025_PasswordGenerator/P3_025_PasswordGenerator-2\.py
