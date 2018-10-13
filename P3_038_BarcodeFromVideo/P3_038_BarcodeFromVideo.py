@@ -3,6 +3,7 @@ import cv2
 from pyzbar import pyzbar
 from time import sleep
 from collections import Counter
+from sys import stderr
 
 def zbar_rect_correction(x,y,w,h):
     return ((x, y), (x + w, y + h))
@@ -40,7 +41,7 @@ while rval:
     rval, frame = camera.read()
     key = cv2.waitKey(1)
     if key == 27:
-        print(0) 
+        stderr.write("Aborted")
         break
     if counter:
         code = Counter(counter).most_common(1)[0]
