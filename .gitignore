@@ -263,4 +263,4 @@ __pycache__/
 
 P3_025_PasswordGenerator/P3_025_PasswordGenerator-2\.py
 # virtual environments
-000_venv*
+*venv*
