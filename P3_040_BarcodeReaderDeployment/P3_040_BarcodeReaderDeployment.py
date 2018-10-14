@@ -3,18 +3,19 @@ import tkinter
 
 import backend
 import ui
+from time import sleep
 
 lock = Lock()
-shutdown = [False]
 image = []
-backend = backend.ReadCode(image, lock, exit)
+backend = backend.ReadCode(image, lock)
 backend.start()
-ui = ui.UIThread(lock, image, exit)
+ui = ui.UIThread(image, lock)
 ui.start()
 threads = (ui, backend)
 
 while True:
     for thread in threads:
         if not thread.is_alive():
-            shutdown[0] = True
             thread.join()
+    """if True not in map(lambda x: x.is_alive(), threads):
+        break"""
