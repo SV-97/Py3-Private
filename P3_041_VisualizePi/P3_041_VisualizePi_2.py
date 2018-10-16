@@ -38,37 +38,27 @@ def pattern_from_image(im, n_x, n_y):
     pattern = cv2.resize(im, (0, 0), fx=factor_x, fy=factor_y, interpolation=cv2.INTER_LANCZOS4)
     return pattern
 
-def textify(im, file, pattern, n, color, fontsize):
-    """Write text to image if corresponding value in pattern is True
-    Args:
-        im (np.ndarray): Image array in shape y, x
-        file (string): Path to file with text that's to be used
-        pattern (np.ndarray of bool): see pattern_from_image
-        n (int): how many pixels are grouped for one letter
-        color (int): value from 0-255 to specify color of text
-        fontsize (int): fontsize of text
-    """
-    with open(file, "r") as f:
-        im = np.ones((length, length))
-        for y in range(len(pattern)):
-            Y = pattern[y]
-            for x in range(len(Y)):
-                if Y[x]:
-                    char = f.read(1)
-                    cv2.putText(im, char, (x*n, y*n), cv2.FONT_HERSHEY_PLAIN, fontsize, color, 1)
-    return im
-
 boolify = np.vectorize(lambda x: True if x <= 127 else False)
 
 
 # print(approximate_pi(500))
+# im = cv2.imread("Pi.png")[:,:,0]
 im = cv2.imread("Pi.png")[:,:,0]
 im = pad_image(im)
 length = np.shape(im)[0]
-# cv2.imwrite("padded.png", im)
+cv2.imwrite("padded.png", im)
 pattern = pattern_from_image(im, 150, 150)
-# cv2.imwrite("pattern.png", pattern)
+cv2.imwrite("pattern.png", pattern)
 pattern = boolify(pattern)
-im = textify(im, "Pi", pattern, 10, 255, 1)
+n = 10
+with open("Pi", "r") as f:
+    im = np.ones((length, length))
+    for y in range(len(pattern)):
+        Y = pattern[y]
+        for x in range(len(Y)):
+            if Y[x]:
+                char = f.read(1)
+                cv2.putText(im, char, (x*n, y*n), cv2.FONT_HERSHEY_PLAIN, 1, 255, 1)
 
-cv2.imwrite("result.png", im)
+cv2.imwrite("SCHOKOLADE.png", im)
+cv2.waitKey(0)
