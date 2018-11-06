@@ -1,6 +1,6 @@
 import hashlib
 import os
-import random
+import random # used rather than secrets because secrets doesn't support seeds
 import string
 import getpass
 
