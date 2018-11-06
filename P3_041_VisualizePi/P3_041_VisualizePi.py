@@ -13,7 +13,6 @@ def pad_image(im, color=255):
         im (np.ndarray): Image array in shape y, x
         color (int): value from 0-255 to specify color of padding
     """
-    color
     height, width = np.shape(im)[:2]
     length = max(height, width)
     length += 1 if length%2 else 0
