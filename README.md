@@ -27,4 +27,31 @@ https://creativecommons.org/licenses/by-sa/4.0/legalcode
 017     - Implemented a custom iterator and generator  
 018     - Compared speed between using a custom iterator and a comprehension  
 019     - Find frequency of f(x)=g(x)+h(x) where g and h are periodic functions  
-020     - Bruteforce Solution to a Math Puzzle: ["SEND + MORE = MONEY. An Amazing Puzzle - Can You Solve It?" by MindYourDecisions](https://youtu.be/p5YjV-100Hc)  
+020     - Bruteforce Solution to a Math Puzzle: ["SEND + MORE = MONEY. An Amazing Puzzle - Can You Solve It?" by MindYourDecisions](https://youtu.be/p5YjV-100Hc)
+021     - Speed comparison of two ways to get unique elements from a list
+022     - Some functools and contextlib stuff
+023     - A body of mine and I wanted to compare the effects of black powder and smokeless powder on the action of a gun
+024     - Simple utility to validate a file via a given hash
+025     - Password generator and simple password manager
+026     - Program that modifies it's sourcecode on execution
+027     - Speed comparison between parallel solution with varying number of processes vs. linear. Also function to "denoise" data and split workload evenly between processes
+028     - Reply to a guy on stackoverflow that wanted to create new files with ascending numbers in the files names
+029     - Simple histogram in reply to guy on stackoverflow
+030     - Seperate (can't recall if improved) version of the denoise function from 027
+031     - Reply to guy on stackoverflow to find last line of a file
+032     - Very simple Cython example
+033     - Implementation of Sieve of Eratosthenes for Cython
+034     - Needed a test database to study some SQL
+035     - Trying pickle
+036     - First verion of a barcode reader, now in seperate repository
+037     - Take a photo via webcam
+038     - Barcode Reader second version, now in seperate repository
+039     - Simple tikinter app
+040     - Original "deployment"(release?) version of the Barcode Reader, now in seperate repository
+041     - Had the fun idea of rebuilding a picture from text. Area in original picture is condensed into it's average and depending on the value of that average text is written to the output
+042     - Adapters and converters for custom classes for sqlite3
+043     - Buddy of mine uses Ansys alot and there's alot of stuff in it he can't have in the file for further processing so I automated it
+044     - Just copied from a book of mine to try it out
+045     - Class I proposed for CPython stdlib (extension of threading.Timer)
+046     - Server that listens on UDP for some messages
+047     - Small chat based on a TCP connection
