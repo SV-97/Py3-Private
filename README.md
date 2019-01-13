@@ -18,7 +18,7 @@ https://creativecommons.org/licenses/by-sa/4.0/legalcode
 008     - Implementation of Merge Sort  
 009     - Interface with batch to get latency of connection with remote server and plot it time domain in a live plot  
 010     - Deployed version independent of Python - Program to calculate voltage divider circuits for reference voltages and find standart series resistors to build the circuit with  
-011     - Calculating some mechanical stresses  
+~~011     - Calculating some mechanical stresses~~
 012     - Implementation of the dice minigame from kingdom come deliverance  
 013     - Basic server that listens on a port, sends and receives data - First contact with sockets  
 ~~014     - Network implementation of 012 - not working as of now~~  
@@ -55,3 +55,7 @@ https://creativecommons.org/licenses/by-sa/4.0/legalcode
 045     - Class I proposed for CPython stdlib (extension of threading.Timer)
 046     - Server that listens on UDP for some messages
 047     - Small chat based on a TCP connection
+048     - Test with Django, adaption from book
+049     - How to use a generator as a consumer
+050     - Using composite simpsons to approximate the integral of a function - also see the C++ (https://github.com/JoshuaSimon/Numerical-Integration) and rust (https://github.com/SV-97/Rust/tree/master/R_004_NumericIntegration) implementation. Rust actually ran faster than C++ with the tested values, with Python expectedly clocking in at an order of magnitude more.
+051     - Solver for systems of linear equations using Gaussian elimination (and various other linear algebra functions that I thought I needed but ultimately didn't use)
