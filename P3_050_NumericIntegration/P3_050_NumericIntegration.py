@@ -3,7 +3,7 @@ from time import time
 
 
 def function(a):
-    return tan(exp(a))**3
+    return sin(a)
 
 
 def composite_simpsons(f, a, b, n):
@@ -18,7 +18,7 @@ def composite_simpsons(f, a, b, n):
     return integral
 
 t1 = time()
-integral_of_function = composite_simpsons(function, -2.6, 2.6, 100)
+integral_of_function = composite_simpsons(function, 0, 2*pi, 100000)
 t2 = time()
 print(f"Integration took {t2-t1} seconds")
 print(f"F approx: {integral_of_function}")
