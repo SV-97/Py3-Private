@@ -1,4 +1,5 @@
 from math import e, floor, log2, pi, sin
+from time import time
 
 import matplotlib.pyplot as plt
 
@@ -13,7 +14,7 @@ def fft(f):
         u = fft(f[1::2])
         c_k_1 = [g[k] + u[k] * e**(-2 * pi * 1j * k / n) for k in range(half_n)]
         c_k_2 = [g[k] - u[k] * e**(-2 * pi * 1j * k / n) for k in range(half_n)]
-        c_k_1 = c_k_1 + c_k_2
+        c_k_1.extend(c_k_2)
         return c_k_1
 
 
@@ -60,7 +61,10 @@ t = linspace(min_value, max_value, values)
 
 ##
 wave = [rectwave(1, 1, x, 0, 0) for x in t]
+t1 = time()
 wave_fft = fft(wave)[:len(t)//2]
+t2 = time()
+print(t2-t1)
 wave_fft = [abs(x) for x in wave_fft]
 
 wave_fft_freq = fft_freq(len(wave), 1/sample_rate)
