@@ -5,7 +5,7 @@ All files in this git are published under a Creative Commons Attribution-ShareAl
 https://creativecommons.org/licenses/by-sa/4.0/legalcode
 
 ## Repository for learning Python, various small programs and snippets
-Please keep in mind that this code isn't necessarily good, but rather a quick solution to a problem I wanted to tackle or something I wanted to try. For higher quality code, stuff like TUInventory are probably the better reference.
+Please keep in mind that this code isn't necessarily good, but rather a quick solution to a problem I wanted to tackle or something I wanted to try. For higher quality code, stuff like TUInventory is probably the better reference.
 
 000     - Number guess game  
 001     - Calculate faculty of a number  
