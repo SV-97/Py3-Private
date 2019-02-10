@@ -5,6 +5,7 @@ All files in this git are published under a Creative Commons Attribution-ShareAl
 https://creativecommons.org/licenses/by-sa/4.0/legalcode
 
 ## Repository for learning Python, various small programs and snippets
+Please keep in mind that this code isn't necessarily good, but rather a quick solution to a problem I wanted to tackle or something I wanted to try. For higher quality code, stuff like TUInventory are probably the better reference.
 
 000     - Number guess game  
 001     - Calculate faculty of a number  
@@ -59,3 +60,8 @@ https://creativecommons.org/licenses/by-sa/4.0/legalcode
 049     - How to use a generator as a consumer
 050     - Using composite simpsons to approximate the integral of a function - also see the C++ (https://github.com/JoshuaSimon/Numerical-Integration) and rust (https://github.com/SV-97/Rust/tree/master/R_004_NumericIntegration) implementation. Rust actually ran faster than C++ with the tested values, with Python expectedly clocking in at an order of magnitude more.
 051     - Solver for systems of linear equations using Gaussian elimination (and various other linear algebra functions that I thought I needed but ultimately didn't use)
+052     - Just played around a bit with sorting the pixels of an image
+053     - Pure Python Discrete Fast Fourier Transform
+054     - May do this at some point: Access the class a function is defined on
+055     - WIP: Pure Python implementation of SHA-256 just to test a few things. Also incorporates a class to easier manipulate bitwise data(Without using the bitstring module)
+056     - Speed comparison of using a for loop, list comprehension or map in cases where they're purely used for side effects rather than producing a list
