@@ -1,0 +1,13 @@
+[package]
+name = "rusty-integration"
+version = "0.1.0"
+authors = ["Stefan Volz <volzstefan97@googlemail.com>"]
+edition = "2018"
+
+[lib]
+name = "rusty_integration"
+crate-type = ["cdylib"]
+
+[dependencies.pyo3]
+version = "0.7.0-alpha.1"
+features = ["extension-module"]

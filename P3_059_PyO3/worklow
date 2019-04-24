@@ -1,0 +1,5 @@
+create new rust lib as seen here
+"cargo +nightly build" it
+Get binary from target/release
+remove "lib" prefix of binary
+should be importable by python
