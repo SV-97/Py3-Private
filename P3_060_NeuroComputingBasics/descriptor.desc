@@ -1,0 +1,11 @@
+title: NAND-Gate using McCulloch-Pitts-Neurons
+in: a b
+out: X
+c: 2
+a -- c
+b -- c
+d: 1
+a -- d
+b -- d
+c -o d
+d -- X

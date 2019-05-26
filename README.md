@@ -65,3 +65,7 @@ Please keep in mind that this code isn't necessarily good, but rather a quick so
 054     - May do this at some point: Access the class a function is defined on  
 055     - WIP: Pure Python implementation of SHA-256 just to test a few things. Also incorporates a class to easier manipulate bitwise data(Without using the bitstring module)  
 056     - Speed comparison of using a for loop, list comprehension or map in cases where they're purely used for side effects rather than producing a list  
+057     - Draws Voronoi diagrams for given points  
+058     - I think this was a problem someone on stack overflow had and my solution to it?  
+059     - An example module for how to extend python with rust  
+060     - Currently reading a bit on ANNs and came across the McCulloch/Pitts Neuronmodel and tried my hand at implementing it. Also wrote a small description language to generate the neuron-structure and graphviz-dot-graphs that visualize this structure.  

@@ -1,0 +1,38 @@
+digraph G {
+    compound = true;
+    labelloc = "t";
+    label = <<B>NAND-Gate using McCulloch-Pitts-Neurons</B>>;
+    
+    and_1 [label="S=2"];
+    or_1 [label="S=1"];
+    A_1 [label="A", shape=plain];
+    B_1 [label="B", shape=plain];
+    X_1 [label="X", shape=plain];
+    edge [arrowhead=none];
+    A_1 -> and_1;
+    B_1 -> and_1;
+    A_1 -> or_1;
+    B_1 -> or_1;
+    and_1 -> or_1 [arrowhead=odot];
+    or_1 -> X_1;
+}
+
+/*
+digraph G {
+    compound = true;
+    labelloc = "t";
+    label = <<B>NAND-Gate using McCulloch-Pitts-Neurons</B>>;
+
+    node [shape=record];
+    and_1 [label="{{<inhibitor>inhib.|<input>input}|{S=2}}"];
+    or_1 [label="{{<inhibitor>inhib.|<input>input}|{S=1}}"];
+    A_1 [label="A", shape=plain];
+    B_1 [label="B", shape=plain];
+    X_1 [label="X", shape=plain];
+    A_1 -> and_1:input;
+    B_1 -> and_1:input;
+    A_1 -> or_1:input;
+    B_1 -> or_1:input;
+    and_1 -> or_1:inhibitor;
+    or_1 -> X_1;
+}
