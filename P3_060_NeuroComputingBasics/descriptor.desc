@@ -1,11 +1,52 @@
-title: NAND-Gate using McCulloch-Pitts-Neurons
-in: a b
-out: X
-c: 2
-a -- c
-b -- c
-d: 1
-a -- d
-b -- d
-c -o d
-d -- X
+title: Two-Bit-Half-Adder using McCulloch/Pitts-Neurons
+in: a0 b0 a1 b1
+out: X0 X1 C1
+
+xor1_1: 1
+xor1_2: 1
+xor1_3: 1
+a0 -- xor1_1
+b0 -o xor1_1
+b0 -- xor1_2
+a0 -o xor1_2
+xor1_1 -- xor1_3
+xor1_2 -- xor1_3
+xor1_3 -- X0
+
+and1: 2
+a0 -- and1
+b0 -- and1
+
+xor2_1: 1
+xor2_2: 1
+xor2_3: 1
+a1 -- xor2_1
+b1 -o xor2_1
+b1 -- xor2_2
+a1 -o xor2_2
+xor2_1 -- xor2_3
+xor2_2 -- xor2_3
+
+and2: 2
+a1 -- and2
+b1 -- and2
+
+xor3_1: 1
+xor3_2: 1
+xor3_3: 1
+and1 -- xor3_1
+xor2_3 -o xor3_1
+xor2_3 -- xor3_2
+and1 -o xor3_2
+xor3_1 -- xor3_3
+xor3_2 -- xor3_3
+xor3_3 -- X1
+
+and3: 2
+xor2_3 -- and3
+and1 -- and3
+
+or1: 1
+and2 -- or1
+and3 -- or1
+or1 -- C1

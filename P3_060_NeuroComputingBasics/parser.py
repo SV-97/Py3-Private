@@ -39,16 +39,17 @@ class Input(McpNeuron):
 
 
 class Parser():
-    Title = re.compile(r"title: (?P<title>(\S ?)+)")
-    In = re.compile(r"in: (?P<inputs>(\S(?!\-) ?)+)")
-    Out = re.compile(r"out: (?P<outputs>(\S(?!\-) ?)+)")
-    Link = re.compile(r"(?P<left>(\S(?!\-) ?)+) -- (?P<right>(\S(?!\-) ?)+)")
-    Inhibition = re.compile(r"(?P<left>(\S(?!\-) ?)+) -o (?P<right>(\S(?!\-) ?)+)")
-    NeuronDecl = re.compile(r"(?P<name>(\S(?!\-) ?)+): (?P<value>\d+)")
+    Title = re.compile(r"^title: (?P<title>(\S ?)+)")
+    In = re.compile(r"^in: (?P<inputs>(\S(?!\-) ?)+)")
+    Out = re.compile(r"^out: (?P<outputs>(\S(?!\-) ?)+)")
+    Link = re.compile(r"^(?P<left>(\S(?!\-) ?)+) -- (?P<right>(\S(?!\-) ?)+)")
+    Inhibition = re.compile(r"^(?P<left>(\S(?!\-) ?)+) -o (?P<right>(\S(?!\-) ?)+)")
+    NeuronDecl = re.compile(r"^(?P<name>(\S(?!\-) ?)+): (?P<value>\d+)")
 
     def __init__(self, source, symbol_table):
         self.source = source.split("\n")
         self.symbol_table = symbol_table
+        self.line_counter = 0
 
     def __iter__(self):
         self.source_iter = iter(self.source)
@@ -60,7 +61,7 @@ class Parser():
     def __next__(self):
         cls = self.__class__
         line = next(self.source_iter)
-
+        self.line_counter += 1
         inputs = cls.In.search(line)
         if inputs is not None:
             for name in inputs.group("inputs").split(" "):
@@ -99,7 +100,10 @@ class Parser():
             self.symbol_table.title = title
             return
 
-        raise SyntaxError("Invalid Syntax")
+        if re.search(r"(\s|\v)*", line): # skip empty lines, newlines etc
+            return next(self)
+
+        raise SyntaxError(f"Invalid Syntax in line {self.line_counter}: {line}")
 
 
 class Writer():
@@ -114,7 +118,8 @@ class Writer():
 digraph G {
     compound = true;
     labelloc = "t";\n"""
-f"    label = <<B>{self.table.title}</B>>;\n\n")
+f"    label = <<B>{self.table.title}</B>>;\n"
+"    edge [arrowhead=none];\n")
             for name, inp in self.table.inputs.items(): # declarations
                 f.write(f"{indent}{id(inp)} [label=\"{name}\", shape=plain];\n")
             for name, outp in self.table.outputs.items():
@@ -122,10 +127,9 @@ f"    label = <<B>{self.table.title}</B>>;\n\n")
             for name, neuron in self.table.neurons.items():
                 f.write(f"{indent}{id(neuron)} [label=\"S={neuron.treshold}\"];\n")
 
-            
             for item in self.table.outputs.values(): # output links and inhibitions
                 for link in item.inputs:                
-                    f.write(f"{indent}{id(link)} -> {id(item)};")
+                    f.write(f"{indent}{id(link)} -> {id(item)};\n")
                 for inhibitor in item.inhibitors:                
                     f.write(f"{indent}{id(inhibitor)} -> {id(item)} [arrowhead=odot];\n")
 
