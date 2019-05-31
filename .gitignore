@@ -264,3 +264,6 @@ __pycache__/
 P3_025_PasswordGenerator/P3_025_PasswordGenerator-2\.py
 # virtual environments
 *venv*
+P3_025_PasswordGenerator/passwords\.py
+
+P3_025_PasswordGenerator/totally_not_my_passwords\.db
