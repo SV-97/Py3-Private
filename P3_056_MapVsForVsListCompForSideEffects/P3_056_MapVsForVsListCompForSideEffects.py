@@ -12,10 +12,11 @@ with tempfile.TemporaryFile("w+") as out:
             printer(b)
 
     def f_2(a):
+        # for _ in (printer(b) for b in a): pass is terribly slow in comparison
         [printer(b) for b in a]
 
     def f_3(a):
-        map(printer, a)
+        for _ in map(printer, a): pass
 
     for j in range(10):
         T1 = []
