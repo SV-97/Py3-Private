@@ -21,6 +21,8 @@ class Poly():
     so the leftmost coefficient is the constant.
     """
 
+    __slots__ = ["coeffs"]
+
     def __init__(self, *coeffs: Number):
         coeffs_: Iterable[Number] = dropwhile(
             lambda c: c == 0, reversed(coeffs))
