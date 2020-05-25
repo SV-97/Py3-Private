@@ -269,3 +269,5 @@ P3_025_PasswordGenerator/passwords\.py
 P3_025_PasswordGenerator/totally_not_my_passwords\.db
 
 *.db
+
+*/.mypy_cache
