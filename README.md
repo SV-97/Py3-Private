@@ -70,6 +70,7 @@ Please keep in mind that this code isn't necessarily good, but rather a quick so
 058 - I think this was a problem someone on stack overflow had and my solution to it?  
 059 - An example module for how to extend python with rust  
 060 - Currently reading a bit on ANNs and came across the McCulloch/Pitts Neuronmodel and tried my hand at implementing it. Also wrote a small description language to generate the neuron-structure and graphviz-dot-graphs that visualize this structure.  
-063 - Small function to get both the principal as well as all secondary roots of a complex number
-064 - Polynomial Class
-065 - Program to calculate the probabilities of matchups in a football tournament
+063 - Small function to get both the principal as well as all secondary roots of a complex number  
+064 - Polynomial Class  
+065 - Program to calculate the probabilities of matchups in a football tournament  
+066 - Basic parser combinators  
