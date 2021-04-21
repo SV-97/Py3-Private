@@ -93,8 +93,8 @@ class LEcuyerGenerator(RandomNumberGenerator):
         a_1p = self.a_1p
         a_2p = self.a_2p
         # x_(n-3), x_(n-2), x_(n-1)
-        x_n = RingBuffer([seed, 0, 1, None])
-        x_np = RingBuffer([-1, seed, 1, None])
+        x_n = RingBuffer([seed, seed, seed, None])
+        x_np = RingBuffer([seed, seed, seed, None])
         for n in count(len(x_n) - 1):  # start ringbuffer at last element
             x_n[n] = (a_1 * x_n[n - 2] - a_2 * x_n[n-3]) % m
             x_np[n] = (a_1p * x_np[n-1] - a_2p * x_np[n-3]) % m_p
@@ -125,8 +125,8 @@ class MersenneTwister(RandomNumberGenerator):
 """
 
 
-#random_generator = LinearCongruenceGenerator()
-random_generator = LEcuyerGenerator()
+random_generator = LinearCongruenceGenerator()
+#random_generator = LEcuyerGenerator()
 
 
 def uniform_distribution(a=0, b=1, seed=0):
