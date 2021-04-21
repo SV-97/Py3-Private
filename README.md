@@ -74,3 +74,5 @@ Please keep in mind that this code isn't necessarily good, but rather a quick so
 064 - Polynomial Class  
 065 - Program to calculate the probabilities of matchups in a football tournament  
 066 - Basic parser combinators  
+067 - Small library for defining and solving systems of ordinary differential equations some noise related stuff
+068 - Pseudorandom number generators and generators for a bunch of different probability distributions. Also has some functions to smooth-out / denoise functions, find probability functions and probability density functions for a given sample as well as a small monte-carlo simulation as an example application of the library (finding the half-time of isotopes given their decay-rate)
