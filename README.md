@@ -77,3 +77,7 @@ Please keep in mind that this code isn't necessarily good, but rather a quick so
 067 - Small library for defining and solving systems of ordinary differential equations some noise related stuff  
 068 - Pseudorandom number generators and generators for a bunch of different probability distributions. Also has some functions to smooth-out / denoise functions, find probability functions and probability density functions for a given sample as well as a small monte-carlo simulation as an example application of the library (finding the half-time of isotopes given their decay-rate)  
 069 - Builds on 068 by extending it with a progress bar and implementing `RelativeDict`s (ordered dictionaries with relative access capabilities) as well as infinite precision `BigTimeDelta`s because the `datetime.timedelta` fails for large time-frames  
+070 - Simulations of various dynamical systems exhibiting deterministic chaotic behaviour
+071 - Binary search implementation that's a bit golfy
+072 - Decorator to autocurry functions
+
